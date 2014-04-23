@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="${request.contextPath}/images/favicon.ico">
 
     <title><g:layoutTitle /></title>
-    <r:require modules="obis" />
+    <r:require modules="amrin" />
     <style type="text/css">
         body {
             background-color: #ffffff !important;
@@ -98,12 +98,11 @@
 <alatag:outageBanner />
 
 <nav>
-    <div class="container">
+    <div class="inner">
         <ul id="nav-site">
             <li><a href="${request.contextPath}/">Home</a></li>
-            <li class="${(section=='search')?'selected':''}"><a href="${request.contextPath}/search">Search</a></li>
-            <li class="${(section!='search' && section!='yourArea')?'selected':''}"><a href="${request.contextPath}/occurrences/search">Records</a></li>
-            <li class="${(section=='yourArea')?'selected':''}"><a href="${request.contextPath}/explore/your-area">Your Area</a></li>
+            <li class="selected"><a href="${request.contextPath}/search">Search</a></li>
+            <li><a href="${request.contextPath}/occurrences/search">Records</a></li>
         </ul>
         <ul id="nav-user">
             <li><a href="http://www.ala.org.au/my-profile/" title="My profile">My profile</a></li>
@@ -113,53 +112,41 @@
     </div>
 </nav>
 <header id="site-header">
-    <div class="container">
-        <h1 title="${fullName}"><a href=""><img src="${request.contextPath}/static/images/obis/logo-small.png" /></a></h1>
+    <div class="inner">
+        <h1 title="Australian Microbial Resources information Network"><a href=""><img src="http://www.ala.org.au/wp-content/themes/ala2011/images/amrin-sm.png" width="58" height="82" /></a></h1>
         <section>
             <div id="search">
                 <form name="siteSearchForm" id="siteSearchForm" action="${request.contextPath}/occurrences/search" method="GET">
                     <label for="search">Quick search</label>
-                    <input id="taxaQuery" title="Search" type="text" name="taxa" placeholder="Quick search" class="ac_input freetext" value="${params.taxa}" /><button value="Search" type="submit">Search</button>
+                    <input id="taxa" title="Search" type="text" name="taxa" placeholder="Quick search" class="name_autocomplete freetext" value="${params.taxa}" /><button value="Search" type="submit">Search</button>
                 </form>
             </div>
-            <p><strong>More options</strong>: <a href="${request.contextPath}/index#tab_advanceSearch">Advanced search</a>,
-                <a href="${request.contextPath}/index#tab_taxaUpload">Batch taxon search</a>,
-                <a href="${request.contextPath}/index#tab_catalogUpload">Batch catalogue no. search</a>,
-                <a href="${request.contextPath}/index#tab_shapeFileUpload">Shapefile search</a></p>
+            <p><strong>More options</strong>: <a href="${request.contextPath}/#tab_advanceSearch">Advanced search</a>,
+                <a href="${request.contextPath}/#tab_taxaUpload">Batch taxon search</a>,
+                <a href="${request.contextPath}/#tab_catalogUpload">Batch catalogue no. search</a>,
+                <a href="${request.contextPath}/#tab_shapeFileUpload">Shapefile search</a></p>
         </section>
     </div>
 </header>
-<div id="content">
-    <section class="container">
+<div class="inner" id="content">
+    <section>
         <g:layoutBody />
     </section>
 </div><!-- end div#inner -->
-<footer class="">
-    <div class="container">
+<footer>
+    <div class="inner">
         <section class="copyright">
-            <div class="img-left"><a href="http://creativecommons.org/licenses/by/3.0/au/"
-                                     title="External link to Creative Commons"><img
-                    src="http://www.ala.org.au/wp-content/themes/ala2011/images/creativecommons.png" width="88"
-                    height="31" alt=""/></a></div>
-            <p><a href="${request.contextPath}/help/termsOfUse" title="Terms of Use">Terms of Use</a> |
-                <a href="${request.contextPath}/help/contactObis">Contact</a><br/>This site is licensed
-                under a <a href="http://creativecommons.org/licenses/by/3.0/au/"
-                           title="External link to Creative Commons" class="external">Creative Commons Attribution
-                    3.0 Australia License</a>.</p>
-
-            <div class="img-right"><a href="http://www.ala.org.au" title="Atlas of Living Australia"><img
-                    src="http://www.ala.org.au/wp-content/themes/ala2011/images/poweredby-ala.png" width="178"
-                    height="62" alt=""/></a></div>
+            <div class="img-left"><a href="http://creativecommons.org/licenses/by/3.0/au/" title="External link to Creative Commons"><img src="http://www.ala.org.au/wp-content/themes/ala2011/images/creativecommons.png" width="88" height="31" alt="" /></a></div><p><a href="" title="Terms of Use">Terms of Use</a> | <a href="">Contact</a><br />This site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/au/" title="External link to Creative Commons" class="external">Creative Commons Attribution 3.0 Australia License</a>.</p><div class="img-right"><a href="http://www.ala.org.au" title="Atlas of Living Australia"><img src="http://www.ala.org.au/wp-content/themes/ala2011/images/poweredby-ala.png" width="178" height="62" alt="" /></a></div>
         </section>
     </div>
 </footer>
 <%--<script type="text/javascript">--%>
-    <%--var uvOptions = {};--%>
-    <%--(function() {--%>
-        <%--var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;--%>
-        <%--uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/5XG4VblqrwiubphT3ktPQ.js';--%>
-        <%--var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);--%>
-    <%--})();--%>
+<%--var uvOptions = {};--%>
+<%--(function() {--%>
+<%--var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;--%>
+<%--uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/5XG4VblqrwiubphT3ktPQ.js';--%>
+<%--var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);--%>
+<%--})();--%>
 <%--</script>--%>
 <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
