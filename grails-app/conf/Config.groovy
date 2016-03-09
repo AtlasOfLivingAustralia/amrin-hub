@@ -31,7 +31,7 @@ println "default_config = ${default_config}"
  *  SKINNING
 \******************************************************************************/
 skin.layout = 'amrin'
-skin.orgNameLong = "Australian Microbial Resources information Network"
+skin.orgNameLong = "Australian Microbial Resources Information Network"
 skin.orgNameShort = "AMRIN"
 // whether crumb trail should include a home link that is external to this webabpp - ala.baseUrl is used if true
 skin.includeBaseUrl = true
