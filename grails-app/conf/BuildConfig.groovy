@@ -71,6 +71,8 @@ grails.project.dependency.resolution = {
         runtime ( ":biocache-hubs:1.2-SNAPSHOT" ) {
             excludes ( ':ala-auth:1.3.4' )
         }
-        runtime ":ala-web-theme:0.8.8-SNAPSHOT"
+        runtime ( ":ala-web-theme:0.8.8-SNAPSHOT" ) {
+            excludes ( ':ala-auth:1.3.4' )
+        }
     }
 }
