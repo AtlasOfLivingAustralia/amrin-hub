@@ -69,10 +69,10 @@ grails.project.dependency.resolution = {
         //runtime ":yui-minify-resources:0.1.5"
         
         runtime ( ":biocache-hubs:1.2-SNAPSHOT" ) {
-            excludes ( ':ala-auth:1.3.4' )
+            excludes ( ':ala-auth' )
         }
         runtime ( ":ala-web-theme:0.8.8-SNAPSHOT" ) {
-            excludes ( ':ala-auth:1.3.4' )
+            excludes ( ':ala-auth' )
         }
     }
 }
