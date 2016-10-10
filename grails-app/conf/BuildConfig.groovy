@@ -70,6 +70,6 @@ grails.project.dependency.resolution = {
         
         runtime ":biocache-hubs:1.2-SNAPSHOT"
         runtime ":ala-bootstrap2:2.4.3-SNAPSHOT"
-        //runtime ":ala-web-theme:0.8.8-SNAPSHOT"
+        runtime ":ala-auth:1.3.4"
     }
 }
