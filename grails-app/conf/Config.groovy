@@ -137,13 +137,13 @@ environments {
         //grails.resources.debug = true // cache & resources plugins
     }
     test {
-        grails.serverURL = 'http://amrin-test.ala.org.au'
-        serverName='http://amrin-test.ala.org.au'
+        grails.serverURL = 'https://amrin-test.ala.org.au'
+        serverName='https://amrin-test.ala.org.au'
         security.cas.appServerName = serverName
         //security.cas.contextPath = "/${appName}"
     }
     production {
-        serverName = 'http://amrin.ala.org.au'
+        serverName = 'https://amrin.ala.org.au'
         grails.serverURL = serverName
         security.cas.appServerName = serverName
         security.cas.contextPath = ''

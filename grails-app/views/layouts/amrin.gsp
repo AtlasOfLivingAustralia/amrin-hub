@@ -44,7 +44,7 @@
         // initialise plugins
         jQuery(function(){
             // autocomplete on navbar search input
-            jQuery("form#search-form-2011 input#search-2011, form#search-inpage input#search, input#search-2013").autocomplete('http://bie.ala.org.au/search/auto.jsonp', {
+            jQuery("form#search-form-2011 input#search-2011, form#search-inpage input#search, input#search-2013").autocomplete('https://bie.ala.org.au/search/auto.jsonp', {
                 extraParams: {limit: 100},
                 dataType: 'jsonp',
                 parse: function(data) {
@@ -104,7 +104,7 @@
             <li><a href="${request.contextPath}/occurrences/search">Records</a></li>
         </ul>
         <ul id="nav-user">
-            <li><a href="http://www.ala.org.au/my-profile/" title="My profile">My profile</a></li>
+            <li><a href="https://www.ala.org.au/my-profile/" title="My profile">My profile</a></li>
             <g:set var="returnUrlPath" value="${serverName}${request.requestURI}${request.queryString ? '?' : ''}${request.queryString}"/>
             <li class="last"><hf:loginLogout logoutUrl="${request.contextPath}/logout/logout" returnUrlPath="${returnUrlPath}"/></li>
         </ul>
@@ -112,7 +112,7 @@
 </nav>
 <header id="site-header">
     <div class="inner">
-        <h1 title="Australian Microbial Resources information Network"><a href=""><img src="http://www.ala.org.au/wp-content/themes/ala2011/images/amrin-sm.png" width="58" height="82" /></a></h1>
+        <h1 title="Australian Microbial Resources information Network"><a href=""><img src="https://www.ala.org.au/wp-content/themes/ala2011/images/amrin-sm.png" width="58" height="82" /></a></h1>
         <section>
             <div id="search">
                 <form name="siteSearchForm" id="siteSearchForm" action="${request.contextPath}/occurrences/search" method="GET">
@@ -135,21 +135,12 @@
 <footer>
     <div class="inner">
         <section class="copyright">
-            <div class="img-left"><a href="http://creativecommons.org/licenses/by/3.0/au/" title="External link to Creative Commons"><img src="http://www.ala.org.au/wp-content/themes/ala2011/images/creativecommons.png" width="88" height="31" alt="" /></a></div><p><a href="" title="Terms of Use">Terms of Use</a> | <a href="">Contact</a><br />This site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/au/" title="External link to Creative Commons" class="external">Creative Commons Attribution 3.0 Australia License</a>.</p><div class="img-right"><a href="http://www.ala.org.au" title="Atlas of Living Australia"><img src="http://www.ala.org.au/wp-content/themes/ala2011/images/poweredby-ala.png" width="178" height="62" alt="" /></a></div>
+            <div class="img-left"><a href="https://creativecommons.org/licenses/by/3.0/au/" title="External link to Creative Commons"><img src="https://www.ala.org.au/wp-content/themes/ala2011/images/creativecommons.png" width="88" height="31" alt="" /></a></div><p><a href="" title="Terms of Use">Terms of Use</a> | <a href="">Contact</a><br />This site is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/au/" title="External link to Creative Commons" class="external">Creative Commons Attribution 3.0 Australia License</a>.</p><div class="img-right"><a href="https://www.ala.org.au" title="Atlas of Living Australia"><img src="https://www.ala.org.au/wp-content/themes/ala2011/images/poweredby-ala.png" width="178" height="62" alt="" /></a></div>
         </section>
     </div>
 </footer>
-<%--<script type="text/javascript">--%>
-<%--var uvOptions = {};--%>
-<%--(function() {--%>
-<%--var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;--%>
-<%--uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/5XG4VblqrwiubphT3ktPQ.js';--%>
-<%--var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);--%>
-<%--})();--%>
-<%--</script>--%>
 <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    document.write(unescape("%3Cscript src='https://ssl.google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
     var pageTracker = _gat._getTracker("UA-4355440-1");
