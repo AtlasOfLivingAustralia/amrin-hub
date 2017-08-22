@@ -36,7 +36,7 @@ grails.project.dependency.resolution = {
 
     repositories {
         mavenLocal()
-        mavenRepo ("https://nexus.ala.org.au/content/groups/public/") {
+        mavenRepo ("http://nexus.ala.org.au/content/groups/public/") {
             updatePolicy 'always'
         }
     }
@@ -48,7 +48,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        build ":release:3.1.1"
+        build ":release:3.0.1"
         // plugins for the build system only
         build ":tomcat:7.0.54"
 
@@ -68,8 +68,8 @@ grails.project.dependency.resolution = {
         //runtime ":cached-resources:1.1"
         //runtime ":yui-minify-resources:0.1.5"
         
-        runtime ":biocache-hubs:1.5.1-SNAPSHOT"
-        runtime ":ala-bootstrap2:2.6.0-SNAPSHOT"
-        runtime ":ala-auth:2.1.3"
+        runtime ":biocache-hubs:1.3.12"
+        runtime ":ala-bootstrap2:2.4.5"
+        runtime ":ala-auth:1.3.4"
     }
 }
